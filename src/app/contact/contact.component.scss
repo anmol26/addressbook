@@ -1,0 +1,23 @@
+.contact
+{
+    width: 500px;
+    height: 100px;
+    padding: 5px;
+    border: 1px solid #CCCCCC;
+}
+
+.contact:hover {
+    background-color: #CEE7F2;
+  }
+.contact:active {
+    background-color: #CEE7F2;
+  }
+
+.contactlist
+{
+    width:30%
+}
+.selectedContact
+{
+    font-weight: 500;
+}

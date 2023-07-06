@@ -1,0 +1,33 @@
+<div class="container-fluid">
+    <div class="ms-3">
+        <div class="fs-6 fw-bold mt-3">CONTACTS</div>        
+    </div>
+    <div class="mt-3 d-flex">
+        <div class="contactlist">
+        <div class="ms-3" *ngFor="let contact of alldetails">
+            <div class="contact" (click)="onSelectedContact(contact)">
+                <div class="fs-3 ps-1">{{contact.name}}</div>
+                <div class="fs-6 ps-3">{{contact.email}}</div>
+                <div class="fs-6 ps-3 lh-1">{{contact.mobile}}</div>
+            </div>
+        </div>
+        </div>
+
+          <div *ngIf="isEdit">
+            We are currently working on this, {{selectedContact?.name}}.
+          </div>
+          <div *ngIf="!isEdit && selectedContact">
+            <div class="ms-3">
+                <div class="selectedContact d-flex"><div class="fs-3">{{selectedContact.name}}</div>
+                    <div class="ms-5"><span><img src="../../assets/edit1.jpg" height="20px" (click)="onEdit(selectedContact.id)"> EDIT</span></div>
+                    <div class="ms-4"><span><img src="../../assets/delete1.png" (click)="onDelete(selectedContact.id)"> DELETE</span></div>
+                </div>
+                <div>Email: {{selectedContact.email}}</div>
+                <div class="mt-3">Mobile: {{selectedContact.mobile}}</div>
+                <div>Landline: {{selectedContact.landline}}</div>
+                <div class="mt-3">Website: {{selectedContact.website}}</div>
+                <div class="mt-3">Address: {{selectedContact.address}}</div>
+            </div>
+        </div>
+    </div>
+</div>
