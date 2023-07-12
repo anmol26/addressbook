@@ -5,6 +5,10 @@
     padding: 5px;
     border: 1px solid #CCCCCC;
 }
+.contacts-heading
+{
+  font-size: 22px;
+}
 
 .contact:hover {
     background-color: #CEE7F2;
@@ -20,4 +24,26 @@
 .selectedContact
 {
     font-weight: 500;
+    width: 500px;
+    .edit-icon
+    {
+      height: 17px;
+      width: 16px;
+      transform: rotate(348deg);
+      cursor: pointer;
+
+    }
+    .edit{
+      vertical-align: sub;
+    }
+
+    .delete-icon
+    {
+      height: 20px;
+      width: 18px;
+      cursor: pointer;
+    }
+    .delete{
+      vertical-align: sub;
+    }
 }

@@ -24,21 +24,21 @@ export class AppComponent {
     },
     {
       id: 2,
-      name: "Suresh Ventrapati",
-      email: "suresh.v@technovert.com",
+      name: "Vikash Sengar",
+      email: "vikash.s@technovert.com",
       mobile: "+91 5678903455",
       landline: "123432",
-      website: "www.suresh.com",
-      address: "Agra"
+      website: "www.vikash.com",
+      address: "Hathras"
     },
     {
       id: 3,
-      name: "Bhagavan Muddana",
-      email: "bhagavan.m@technovert.com",
+      name: "Anurag Gupta",
+      email: "anurah.g@technovert.com",
       mobile: "+91 789067546",
       landline: "988764",
-      website: "www.bhagavan.com",
-      address: "Varanasi"
+      website: "www.anurag.com",
+      address: "Uppal"
     },
     {
       id: 4,

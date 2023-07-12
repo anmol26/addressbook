@@ -1,0 +1,18 @@
+.form
+{
+    border: 1px solid black;
+    box-shadow: 0px 0px 20px 0px #2c2a2a;
+    .add-btn
+    {
+        background-color:#468C00;
+        color: whitesmoke;
+        width: 100px;
+        border: none;
+        justify-content: center;
+    }
+    .close-btn
+    {
+        cursor: pointer;
+    }
+}
+

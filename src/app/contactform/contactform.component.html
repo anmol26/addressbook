@@ -1,15 +1,62 @@
-We are currently working on this, {{selectedContact?.name}}.
 
-<div>
-    <form>
-      <label for="fname">Name</label>
-      <input type="text" id="fname" name="name">
+    <div class="form p-5 ms-5">
+      <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)" novalidate>  
+        <div *ngIf="isAdd; else isEditId">
+          <input type="text" id="id" name="id" class="d-block w-100 d-none" [value]="selectedContact.id" ngModel>
+        </div>
+        <ng-template #isEditId> <input type="text" id="id" name="id" class="d-block w-100 d-none" [(ngModel)]="id"></ng-template>
+
+        <span class="d-flex justify-content-end close-btn" title="Close" (click)="onClose()">X</span>
+        <div class="">
+          <label for="name" class="fw-bold">Name: </label>
+          <div *ngIf="isAdd; else isEditName">
+            <input type="text" id="name" name="name" class="d-block w-100" [value]="selectedContact.name" ngModel>
+          </div>
+          <ng-template #isEditName> <input type="text" id="name" name="name" class="d-block w-100" [(ngModel)]="name"></ng-template>
+        </div>
+        <div class="mt-2">
+          <label for="email" class="fw-bold">Email: </label>
+          <div *ngIf="isAdd; else isEditEmail">
+            <input type="text" id="email" name="email" class="d-block w-100" [value]="selectedContact.email" ngModel>
+          </div>
+          <ng-template #isEditEmail> <input type="text" id="email" name="email" class="d-block w-100" [(ngModel)]="email"></ng-template>
+        </div>
+        <div class="d-flex">
+        <div class="mt-2">
+          <label for="mobile" class="fw-bold">Mobile: </label>
+          <div *ngIf="isAdd; else isEditMobile">
+            <input type="text" id="mobile" name="mobile" class="d-block w-100" [value]="selectedContact.mobile" ngModel>
+          </div>
+          <ng-template #isEditMobile> <input type="text" id="mobile" name="mobile" class="d-block w-100" [(ngModel)]="mobile"></ng-template>
+        </div>
+        <div class="mt-2 ms-2">
+          <label for="landline" class="fw-bold">Landline: </label>
+          <div *ngIf="isAdd; else isEditLandline">
+            <input type="text" id="landline" name="landline" class="d-block w-100" [value]="selectedContact.landline" ngModel>
+          </div>
+          <ng-template #isEditLandline> <input type="text" id="landline" name="landline" class="d-block w-100" [(ngModel)]="landline"></ng-template>
+        </div>
+        </div>
   
-      <label for="lname">Last Name</label>
-      <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+        <div class="mt-2">
+          <label for="website" class="fw-bold">Website: </label>
+          <div *ngIf="isAdd; else isEditWebsite">
+            <input type="text" id="website" name="website" class="d-block w-100" [value]="selectedContact.website" ngModel>
+          </div>
+          <ng-template #isEditWebsite> <input type="text" id="website" name="website" class="d-block w-100" [(ngModel)]="website"></ng-template>
+        </div>
   
-      <label for="country">Country</label>
-    
-      <input type="submit" value="Submit">
-    </form>
-  </div>
+        <div class="mt-2">
+          <label for="address" class="fw-bold">Address: </label>
+          <div *ngIf="isAdd; else isEditAddress">
+            <textarea type="text" id="address" name="address" class="d-block w-100" [value]="selectedContact.address" ngModel></textarea>
+          </div>
+          <ng-template #isEditAddress> <textarea type="text" id="address" name="address" class="d-block w-100" [(ngModel)]="address"></textarea></ng-template>
+        </div>
+  
+        <div>
+          <button type="submit" class="ms-auto d-flex mt-2 add-btn" title="Add">{{isAdd ? "Add" : "Update"}}</button>
+        </div>
+  
+      </form>
+    </div> 

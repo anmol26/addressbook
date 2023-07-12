@@ -1,7 +1,13 @@
 .header-background
 {
     background-color: #3399CC;
-    height: 100px;
+    height: 125px;
+    
+    .brand-name
+    {
+        font-size: 3.3rem !important;
+        font-weight: 375;
+    }
 }
 
 .navbar-backgorund

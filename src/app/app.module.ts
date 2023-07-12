@@ -6,21 +6,26 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ContactComponent } from './contact/contact.component';
 import { ContactdetailComponent } from './contactdetail/contactdetail.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ContactformComponent } from './contactform/contactform.component';
+import { ContactformModule } from './contactform/contactform.module';
+
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    NavbarComponent,
-    ContactComponent,
-    ContactdetailComponent,
-    ContactformComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        NavbarComponent,
+        ContactdetailComponent,
+        ContactComponent
+    ],
+    providers: [],
+    bootstrap: [AppComponent],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        FormsModule,
+        ReactiveFormsModule,
+        ContactformModule
+    ]
 })
 export class AppModule { }
